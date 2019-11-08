@@ -13,7 +13,7 @@
           Documentation
         </a>
         <a
-          href="https://github.com/nuxt/nuxt.js"
+          href="https://github.com/gladsy/nuxt-circle-ci"
           target="_blank"
           class="button--grey"
         >
