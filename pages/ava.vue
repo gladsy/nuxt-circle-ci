@@ -5,13 +5,13 @@
 <script>
 export default {
   data() {
-    return { name: 'world!' }
+    return { name: "world!" }
   }
 }
 </script>
 
 <style>
-  .red {
-    color: red;
-  }
+.red {
+  color: red;
+}
 </style>

@@ -1,4 +1,4 @@
-var baseRoute = env => (env === 'GH_PAGES' ? '/nuxt-circle-ci/' : '/')
+var baseRoute = env => (env === "GH_PAGES" ? "/nuxt-circle-ci/" : "/")
 
 module.exports = {
   /*
@@ -11,7 +11,13 @@ module.exports = {
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: "Nuxt.js project" }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: baseRoute(process.env.DEPLOY_ENV) + "/favicon.ico" }]
+    link: [
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: baseRoute(process.env.DEPLOY_ENV) + "/favicon.ico"
+      }
+    ]
   },
   router: {
     base: baseRoute(process.env.DEPLOY_ENV)
