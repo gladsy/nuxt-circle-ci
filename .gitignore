@@ -13,3 +13,7 @@ dist
 # lock file
 package-lock.json
 yarn.lock
+
+# rsa file
+id_rsa
+id_rsa.pub
