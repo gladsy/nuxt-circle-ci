@@ -20,16 +20,40 @@
           GitHub
         </a>
       </div>
+
+      <div>
+        <p>store: {{ this.$store.state.hogeFormStore }}</p>
+        <p>increment: {{ this.$store.state.increment.count }}</p>
+        <button
+          @click="$store.dispatch(`'writeHoge'`, `'templateから書き換えます'`)"
+        >
+          store-01
+        </button>
+        <button @click="increment">store-02</button>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
 import AppLogo from "~/components/AppLogo.vue"
+import { mapMutations, mapActions } from "vuex"
 
 export default {
   components: {
     AppLogo
+  },
+  methods: {
+    ...mapMutations({
+      _writeHoge: `'setHogeFormState'`
+    }),
+    ...mapActions({
+      count: `'increment/writeHoge'`
+    }),
+    increment() {
+      this._writeHoge(`'incrementも書き換え'`)
+      this.count()
+    }
   }
 }
 </script>
