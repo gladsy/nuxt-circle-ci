@@ -9,80 +9,82 @@
         Nuxt.js project
       </h2>
       <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
+        <a href="https://nuxtjs.org/" target="_blank" class="button--green"
+          >Documentation</a
+        >
         <a
           href="https://github.com/gladsy/nuxt-circle-ci"
           target="_blank"
           class="button--grey"
+          >GitHub</a
         >
-          GitHub
-        </a>
       </div>
 
       <div>
         <p>store: {{ this.$store.state.hogeFormStore }}</p>
         <p>increment: {{ this.$store.state.increment.count }}</p>
         <button
-          @click="$store.dispatch(`'writeHoge'`, `'templateから書き換えます'`)"
+          @click="$store.dispatch('writeHoge', 'templateから書き換えます')"
         >
           store-01
         </button>
-        <button @click="increment">store-02</button>
+        <button @click="increment">
+          store-02
+        </button>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import AppLogo from "~/components/AppLogo.vue"
-import { mapMutations, mapActions } from "vuex"
+import AppLogo from '~/components/AppLogo.vue'
+import { mapMutations, mapActions } from 'vuex'
 
 export default {
   components: {
-    AppLogo
+    AppLogo,
   },
   methods: {
     ...mapMutations({
-      _writeHoge: `'setHogeFormState'`
+      _writeHoge: 'setHogeFormState',
     }),
     ...mapActions({
-      count: `'increment/writeHoge'`
+      count: 'increment/writeHoge',
     }),
     increment() {
-      this._writeHoge(`'incrementも書き換え'`)
+      this._writeHoge('incrementも書き換え')
       this.count()
-    }
-  }
+    },
+  },
 }
 </script>
 
 <style>
 .container {
-  min-height: 100vh;
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
+  min-height: 100vh;
   text-align: center;
 }
 
 .title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
   color: #35495e;
+  display: block;
+  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; /* 1 */
+
+  font-size: 100px;
+  font-weight: 300;
   letter-spacing: 1px;
 }
 
 .subtitle {
-  font-weight: 300;
-  font-size: 42px;
   color: #526488;
-  word-spacing: 5px;
+  font-size: 42px;
+  font-weight: 300;
   padding-bottom: 15px;
+  word-spacing: 5px;
 }
 
 .links {

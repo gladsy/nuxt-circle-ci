@@ -12,6 +12,8 @@
     "deploy:gh-pages": "gh-pages -d dist -m 'chore: update [skip ci]' -t",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
+    "stylelint": "stylelint '**/*.{scss,vue}'",
+    "stylelintfix": "stylelint '**/*.{scss,vue}' --fix",
     "precommit": "npm run lint",
     "test": "ava"
   },
@@ -22,14 +24,18 @@
   "devDependencies": {
     "ava": "^2.4.0",
     "babel-eslint": "^10.0.3",
-    "eslint": "^4.19.1",
+    "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^2.2.1",
+    "eslint-plugin-nuxt": "^0.5.0",
     "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-vue": "^4.7.1",
     "jsdom": "^15.2.1",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "prettier-stylelint": "^0.4.2",
+    "stylelint": "^12.0.0",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-order": "^3.1.1"
   },
   "ava": {
     "files": [
