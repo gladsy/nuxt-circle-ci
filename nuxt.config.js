@@ -6,6 +6,7 @@ export default {
    */
   head: {
     title: 'nuxt-circle-ci',
+    titleTemplate: '%s | Nuxt.js tag items viewer',
     meta: [
       { charset: 'utf-8' },
       {
@@ -33,6 +34,13 @@ export default {
    ** Customize the progress bar color
    */
   loading: { color: '#3B8070' },
+  // add axios module
+  modules: ['@nuxtjs/axios'],
+  axios: {},
+  plugins: ['~/plugins/axios.js'],
+  env: {
+    QIITA_TOKEN: process.env.QIITA_TOKEN,
+  },
   /*
    ** Build configuration
    */
