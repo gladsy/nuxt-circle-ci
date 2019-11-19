@@ -1,7 +1,10 @@
 <template>
   <section class="container">
     <div>
-      <h3><app-logo /> Nuxt.js のタグが付けられた投稿の一覧</h3>
+      <h3>
+        <app-logo />
+        <span>Nuxt.js のタグが付けられた投稿の一覧</span>
+      </h3>
       <ul>
         <li v-for="item in items" :key="item.id">
           <h4>
@@ -19,6 +22,14 @@
           </p>
         </li>
       </ul>
+      <hr />
+      <div class="footer">
+        <small>
+          <a href="https://github.com/gladsy/nuxt-circle-ci" target="_blank"
+            >GitHub
+          </a>
+        </small>
+      </div>
     </div>
   </section>
 </template>
@@ -67,5 +78,13 @@ p {
 <style scoped>
 .VueToNuxtLogo {
   height: 100px;
+}
+
+hr {
+  border-top: solid 1px #e5e5e5;
+}
+
+.footer {
+  text-align: center;
 }
 </style>
