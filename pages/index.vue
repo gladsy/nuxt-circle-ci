@@ -10,10 +10,10 @@
           <h4>
             <span>{{ item.title }}</span>
             <small>
-              <span>by </span>
-              <nuxt-link :to="`/users/${item.user.id}`">
-                {{ item.user.id }}
-              </nuxt-link>
+              <span>by</span>
+              <nuxt-link :to="`/users/${item.user.id}`">{{
+                item.user.id
+              }}</nuxt-link>
             </small>
           </h4>
           <div>{{ item.body.slice(0, 130) }}......</div>
@@ -26,8 +26,8 @@
       <div class="footer">
         <small>
           <a href="https://github.com/gladsy/nuxt-circle-ci" target="_blank"
-            >GitHub
-          </a>
+            >GitHub</a
+          >
         </small>
       </div>
     </div>
